@@ -85,17 +85,6 @@ export default function Example() {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="hidden space-x-8 md:flex md:ml-10">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-white hover:text-gray-300"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
             </div>
             <div className="hidden md:flex md:items-center md:space-x-6">
               <a
@@ -138,17 +127,6 @@ export default function Example() {
                 </div>
               </div>
               <div className="pt-5 pb-6">
-                <div className="px-2 space-y-1">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="block px-3 py-2 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
                 <div className="px-5 mt-6">
                   <a
                     href="#"
