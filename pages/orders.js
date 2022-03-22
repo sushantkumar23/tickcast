@@ -14,6 +14,8 @@
   }
   ```
 */
+import Image from "next/Image"
+
 const products = [
   {
     id: 1,
@@ -61,9 +63,10 @@ export default function Example() {
           {products.map((product) => (
             <a key={product.id} href={product.href} className="text-sm group">
               <div className="w-full overflow-hidden bg-gray-100 rounded-lg aspect-w-1 aspect-h-1 group-hover:opacity-75">
-                <img
+                <Image
                   src={product.imageSrc}
                   alt={product.imageAlt}
+                  layout="fill"
                   className="object-cover object-center w-full h-full"
                 />
               </div>
