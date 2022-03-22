@@ -14,6 +14,7 @@
   }
   ```
 */
+import Image from "next/Image"
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
@@ -113,7 +114,7 @@ export default function Example() {
             <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
               <div className="flex items-center justify-between px-5 pt-4">
                 <div>
-                  <img
+                  <Image
                     className="w-auto h-8"
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                     alt=""
