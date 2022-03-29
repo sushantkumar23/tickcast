@@ -16,6 +16,7 @@
 */
 import { Fragment } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 import { Popover, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
@@ -290,12 +291,12 @@ export default function Example() {
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
                 Trending Events
               </h2>
-              <a
-                href="#"
-                className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block"
-              >
-                Browse all events<span aria-hidden="true"> &rarr;</span>
-              </a>
+
+              <Link href="/events" passHref>
+                <a className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+                  Browse all events<span aria-hidden="true"> &rarr;</span>
+                </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 mt-6 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-8">

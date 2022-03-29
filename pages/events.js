@@ -1,4 +1,4 @@
-import Image from "next/Image"
+import Image from "next/image"
 
 import event_1 from "../public/event_1.png"
 import event_2 from "../public/event_2.png"
