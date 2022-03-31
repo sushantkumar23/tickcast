@@ -339,7 +339,7 @@ export default function Example() {
           </div>
         </div>
         <div className="bg-gray-900">
-          <div className="max-w-2xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="max-w-2xl px-4 py-24 mx-auto sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="sr-only">Events</h2>
             <div className="sm:flex sm:items-baseline sm:justify-between">
               <h2 className="text-2xl font-extrabold tracking-tight text-gray-100">
@@ -357,7 +357,7 @@ export default function Example() {
               {events.map((event) => (
                 <div
                   key={event.id}
-                  className="relative flex flex-col overflow-hidden bg-white border border-gray-500 rounded-lg shadow-lg group"
+                  className="relative flex flex-col overflow-hidden bg-gray-200 border border-gray-500 rounded-lg shadow-lg group"
                 >
                   <div className="bg-gray-200 aspect-w-3 aspect-h-4 group-hover:opacity-75 sm:aspect-none sm:h-96">
                     <Image
@@ -486,7 +486,7 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <div className="py-16 bg-gray-900">
+        <div className="py-24 bg-gray-900">
           <div className="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-extrabold text-gray-100">
@@ -519,7 +519,7 @@ export default function Example() {
 
         {/* More main page content here... */}
 
-        <div className="overflow-hidden bg-gray-800">
+        <div className="py-24 overflow-hidden bg-gray-800">
           <div className="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <svg
               className="absolute top-0 transform -translate-x-1/2 left-full -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
