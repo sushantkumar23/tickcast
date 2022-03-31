@@ -167,8 +167,38 @@ const features = [
 export default function Example() {
   return (
     <div className="relative overflow-hidden">
+      <div
+        className="hidden sm:block sm:absolute sm:inset-0"
+        aria-hidden="true"
+      >
+        <svg
+          className="absolute bottom-0 right-0 mb-48 text-gray-700 transform translate-x-1/2 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
+          width={364}
+          height={384}
+          viewBox="0 0 364 384"
+          fill="none"
+        >
+          <defs>
+            <pattern
+              id="eab71dd9-9d7a-47bd-8044-256344ee00d0"
+              x={0}
+              y={0}
+              width={20}
+              height={20}
+              patternUnits="userSpaceOnUse"
+            >
+              <rect x={0} y={0} width={4} height={4} fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect
+            width={364}
+            height={384}
+            fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"
+          />
+        </svg>
+      </div>
       <Popover as="header" className="relative">
-        <div className="pt-6 bg-white-900">
+        <div className="pt-6 bg-gray-800">
           <nav
             className="relative flex items-center justify-between px-4 mx-auto max-w-7xl sm:px-6"
             aria-label="Global"
@@ -250,23 +280,21 @@ export default function Example() {
       </Popover>
 
       <main>
-        <div className="pt-10 bg-white-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+        <div className="pt-10 bg-gray-800 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div>
-              <div className="max-w-md px-4 mx-auto sm:max-w-5xl sm:px-6 sm:text-center lg:px-0 lg:flex">
+              <div className="max-w-md px-4 mx-auto sm:max-w-5xl sm:px-6 sm:text-center lg:px-0 lg:flex lg:justify-center">
                 <div className="lg:py-24">
-                  <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-800 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                  <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-100 sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     <span className="block">
-                      Faster secure tickets worldwide
+                      Building the world&#39;s first
                     </span>
-                    <span className="block text-indigo-700">
-                      using NFT on blockchain
+                    <span className="block text-indigo-500">
+                      NFT tickets marketplace
                     </span>
                   </h1>
-                  <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                    Atom brings the cutting edge tech of blockchain to the world
-                    of the tickets. Experience the revolution of ticketing by
-                    using Atom to issue tickets for your events
+                  <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    Buy, trade and collect tickets on the blockchain
                   </p>
                   <div className="max-w-md mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
                     <div className="rounded-md shadow">
@@ -283,16 +311,16 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <div className="bg-white">
+        <div className="bg-gray-900">
           <div className="max-w-2xl px-4 py-16 mx-auto sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="sr-only">Events</h2>
             <div className="sm:flex sm:items-baseline sm:justify-between">
-              <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+              <h2 className="text-2xl font-extrabold tracking-tight text-gray-100">
                 Trending Events
               </h2>
 
               <Link href="/events" passHref>
-                <a className="hidden text-sm font-semibold text-indigo-600 hover:text-indigo-500 sm:block">
+                <a className="hidden text-sm font-semibold text-indigo-500 hover:text-indigo-4d00 sm:block">
                   Browse all events<span aria-hidden="true"> &rarr;</span>
                 </a>
               </Link>
@@ -302,7 +330,7 @@ export default function Example() {
               {events.map((event) => (
                 <div
                   key={event.id}
-                  className="relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-lg group"
+                  className="relative flex flex-col overflow-hidden bg-white border border-gray-500 rounded-lg shadow-lg group"
                 >
                   <div className="bg-gray-200 aspect-w-3 aspect-h-4 group-hover:opacity-75 sm:aspect-none sm:h-96">
                     <Image
@@ -315,7 +343,7 @@ export default function Example() {
                     />
                   </div>
                   <div className="flex flex-col flex-1 p-4 space-y-2">
-                    <h3 className="text-sm font-medium text-gray-900">
+                    <h3 className="text-lg font-bold text-gray-900">
                       <a href={event.href}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {event.name}
@@ -337,7 +365,7 @@ export default function Example() {
           </div>
         </div>
 
-        <div className="relative pt-16 pb-32 overflow-hidden bg-white">
+        <div className="relative pt-16 pb-32 overflow-hidden bg-gray-800">
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
               <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -351,10 +379,10 @@ export default function Example() {
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-100">
                       Reimagining the future of tickets with the power of NFTs
                     </h2>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-gray-200">
                       The vision of Tickfast is to be the most advanced crypto
                       peer-to-peer ticketing platform on the planet. Trustless
                       system that ensures that gets you tickets for your
@@ -398,10 +426,10 @@ export default function Example() {
                     </span>
                   </div>
                   <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-100">
                       Minimal Fees. No Middlemen. Fully Trustless.
                     </h2>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-gray-200">
                       Tickfast works differently to traditional ticketing
                       platforms. Mint NFT tickets directly from the organizers
                       with complete ownership. If you can no longer attend,
@@ -434,7 +462,7 @@ export default function Example() {
 
         {/* More main page content here... */}
 
-        <div className="overflow-hidden bg-gray-50">
+        <div className="overflow-hidden bg-gray-800">
           <div className="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <svg
               className="absolute top-0 transform -translate-x-1/2 left-full -translate-y-3/4 lg:left-auto lg:right-full lg:translate-x-2/3 lg:translate-y-1/4"
@@ -458,7 +486,7 @@ export default function Example() {
                     y={0}
                     width={4}
                     height={4}
-                    className="text-gray-200"
+                    className="text-gray-600"
                     fill="currentColor"
                   />
                 </pattern>
@@ -472,7 +500,7 @@ export default function Example() {
 
             <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
               <div className="lg:col-span-1">
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tight text-gray-100 sm:text-4xl">
                   Bringing a revolution to ticketing
                 </h2>
               </div>
@@ -483,11 +511,11 @@ export default function Example() {
                       <div className="flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
                         <feature.icon className="w-6 h-6" aria-hidden="true" />
                       </div>
-                      <p className="mt-5 text-lg font-medium leading-6 text-gray-900">
+                      <p className="mt-5 text-lg font-medium leading-6 text-gray-100">
                         {feature.name}
                       </p>
                     </dt>
-                    <dd className="mt-2 text-base text-gray-500">
+                    <dd className="mt-2 text-base text-gray-300">
                       {feature.description}
                     </dd>
                   </div>
@@ -497,7 +525,7 @@ export default function Example() {
           </div>
         </div>
       </main>
-      <footer className="bg-white">
+      <footer className="bg-gray-900">
         <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
             {navigation.map((item) => (
