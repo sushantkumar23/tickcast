@@ -164,6 +164,33 @@ const features = [
   },
 ]
 
+const steps = [
+  {
+    name: "Connect",
+    description:
+      "Connect your Solana wallet to pay for tickets on Tickfast to get started",
+    icon: GlobeAltIcon,
+  },
+  {
+    name: "Mint",
+    description:
+      "Mint tickets for all the events that you want to attend while they last!",
+    icon: ScaleIcon,
+  },
+  {
+    name: "Trade",
+    description:
+      "Your NFT ticket will be available in your wallet to use or trade across the world.",
+    icon: LightningBoltIcon,
+  },
+  {
+    name: "Collect",
+    description:
+      "Capture a piece of loved events through NFT collectible tickets for future rewards/discounts!",
+    icon: AnnotationIcon,
+  },
+]
+
 export default function Example() {
   return (
     <div className="relative overflow-hidden">
@@ -457,6 +484,36 @@ export default function Example() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="py-16 bg-gray-900">
+          <div className="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-extrabold text-gray-100">
+                How does this work?
+              </h2>
+              <p className="mt-4 text-lg text-gray-200">
+                Tried and tested system. Get started by just the following
+                simple steps
+              </p>
+            </div>
+            <dl className="mt-12 space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+              {steps.map((step) => (
+                <div key={step.name}>
+                  <dt>
+                    <div className="flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                      <step.icon className="w-6 h-6" aria-hidden="true" />
+                    </div>
+                    <p className="mt-5 text-lg font-bold leading-6 text-gray-100">
+                      {step.name}
+                    </p>
+                  </dt>
+                  <dd className="mt-2 text-base text-gray-200">
+                    {step.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
 
