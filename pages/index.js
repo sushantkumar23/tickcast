@@ -355,7 +355,7 @@ export default function Example() {
                       Reimagining the future of tickets with the power of NFTs
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                      Tickfast's vision is to be the most advanced crypto
+                      The vision of Tickfast is to be the most advanced crypto
                       peer-to-peer ticketing platform on the planet. Trustless
                       system that ensures that gets you tickets for your
                       favourite events at lighning speed.
