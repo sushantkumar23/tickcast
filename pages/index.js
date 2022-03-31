@@ -19,7 +19,14 @@ import Image from "next/image"
 import Link from "next/link"
 
 import { Popover, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import {
+  MenuIcon,
+  XIcon,
+  InboxIcon,
+  SparklesIcon,
+} from "@heroicons/react/outline"
+import event from "../public/event.png"
+import sports from "../public/sports.png"
 import event_1 from "../public/event_1.png"
 import event_2 from "../public/event_2.png"
 import event_3 from "../public/event_3.png"
@@ -267,15 +274,7 @@ export default function Example() {
                         href="#"
                         className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
                       >
-                        Setup Atom
-                      </a>
-                    </div>
-                    <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                      <a
-                        href="#"
-                        className="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-indigo-600 bg-white border border-transparent rounded-md hover:bg-gray-50 md:py-4 md:text-lg md:px-10"
-                      >
-                        Learn More
+                        Join waitlist
                       </a>
                     </div>
                   </div>
@@ -334,6 +333,101 @@ export default function Example() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="relative pt-16 pb-32 overflow-hidden bg-white">
+          <div className="relative">
+            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+              <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                <div>
+                  <div>
+                    <span className="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-md">
+                      <InboxIcon
+                        className="w-6 h-6 text-white"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+                  <div className="mt-6">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                      Reimagining the future of tickets with the power of NFTs
+                    </h2>
+                    <p className="mt-4 text-lg text-gray-500">
+                      Tickfast's vision is to be the most advanced crypto
+                      peer-to-peer ticketing platform on the planet. Trustless
+                      system that ensures that gets you tickets for your
+                      favourite events at lighning speed.
+                    </p>
+                    <div className="mt-6">
+                      <a
+                        href="#"
+                        className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+                      >
+                        Get started
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 sm:mt-16 lg:mt-0">
+                <div className="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                  <Image
+                    layout="responsive"
+                    height={281}
+                    width={500}
+                    className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                    src={event}
+                    alt="Inbox user interface"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-24">
+            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+              <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                <div>
+                  <div>
+                    <span className="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-md">
+                      <SparklesIcon
+                        className="w-6 h-6 text-white"
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </div>
+                  <div className="mt-6">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                      Minimal Fees. No Middlemen. Fully Trustless.
+                    </h2>
+                    <p className="mt-4 text-lg text-gray-500">
+                      Tickfast works differently to traditional ticketing
+                      platforms. Mint NFT tickets directly from the organizers
+                      with complete ownership. If you can no longer attend,
+                      trade with other Tickfast users on our secondary market or
+                      anywhere on the Blockchain.
+                    </p>
+                    <div className="mt-6">
+                      <a
+                        href="#"
+                        className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+                      >
+                        Join Waitlist
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                  <Image
+                    className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                    src={sports}
+                    alt="Customer profile user interface"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
