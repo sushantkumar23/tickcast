@@ -38,6 +38,29 @@ import {
   ScaleIcon,
 } from "@heroicons/react/outline"
 
+const transferFeatures = [
+  {
+    id: 1,
+    name: "Minimal fees.",
+    description:
+      "Built on top of Solana, Cryptik leverages the faster transaction time while ensuring the lowest transaction fees for all exchange of tickets",
+    icon: GlobeAltIcon,
+  },
+  {
+    id: 2,
+    name: "No middlemen.",
+    description:
+      "The underlying blockchain transaction ensures that no middlemen is involved in moving tickets for both primary & secondary transactions",
+    icon: ScaleIcon,
+  },
+  {
+    id: 3,
+    name: "Fully trustless.",
+    description:
+      "No breach of trust as each transaction is written down into blockchain to have a verifiable proof of ticket purchases",
+    icon: LightningBoltIcon,
+  },
+]
 const events = [
   {
     id: 1,
@@ -168,7 +191,7 @@ const steps = [
   {
     name: "Connect",
     description:
-      "Connect your Solana wallet to pay for tickets on Tickfast to get started",
+      "Connect your Solana wallet to pay for tickets on Cryptik to get started",
     icon: GlobeAltIcon,
   },
   {
@@ -234,14 +257,19 @@ export default function Example() {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <Image
-                    className="w-auto h-8 sm:h-10"
-                    height={100}
-                    width={100}
-                    layout="responsive"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt=""
-                  />
+                  <div className="flex">
+                    <Image
+                      className="w-auto h-8 sm:h-10"
+                      height={75}
+                      width={75}
+                      layout="responsive"
+                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                      alt=""
+                    />
+                    <p className="text-xl font-bold text-white uppercase">
+                      Cryptik
+                    </p>
+                  </div>
                 </a>
                 <div className="flex items-center -mr-2 md:hidden">
                   <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white">
@@ -307,6 +335,7 @@ export default function Example() {
       </Popover>
 
       <main>
+        {/* Hero section */}
         <div className="pt-10 bg-gray-800 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
           <div className="mx-auto max-w-7xl lg:px-8">
             <div>
@@ -338,6 +367,8 @@ export default function Example() {
             </div>
           </div>
         </div>
+
+        {/* Trending Events section */}
         <div className="bg-gray-900">
           <div className="max-w-2xl px-4 py-24 mx-auto sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="sr-only">Events</h2>
@@ -392,6 +423,7 @@ export default function Example() {
           </div>
         </div>
 
+        {/* Re-imagine section */}
         <div className="relative pt-16 pb-32 overflow-hidden bg-gray-800">
           <div className="relative">
             <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
@@ -410,7 +442,7 @@ export default function Example() {
                       Reimagining the future of tickets with the power of NFTs
                     </h2>
                     <p className="mt-4 text-lg text-gray-200">
-                      The vision of Tickfast is to be the most advanced crypto
+                      The vision of Cryptik is to be the most advanced crypto
                       peer-to-peer ticketing platform on the planet. Trustless
                       system that ensures that gets you tickets for your
                       favourite events at lighning speed.
@@ -434,50 +466,52 @@ export default function Example() {
                     width={500}
                     className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={event}
-                    alt="Inbox user interface"
+                    alt="Concert show"
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="mt-24">
-            <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
-              <div className="max-w-xl px-4 mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
-                <div>
-                  <div>
-                    <span className="flex items-center justify-center w-12 h-12 bg-indigo-600 rounded-md">
-                      <SparklesIcon
-                        className="w-6 h-6 text-white"
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </div>
-                  <div className="mt-6">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-gray-100">
-                      Minimal Fees. No Middlemen. Fully Trustless.
-                    </h2>
-                    <p className="mt-4 text-lg text-gray-200">
-                      Tickfast works differently to traditional ticketing
-                      platforms. Mint NFT tickets directly from the organizers
-                      with complete ownership. If you can no longer attend,
-                      trade with other Tickfast users on our secondary market or
-                      anywhere on the Blockchain.
-                    </p>
-                    <div className="mt-6">
-                      <a
-                        href="#"
-                        className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-                      >
-                        Join Waitlist
-                      </a>
+        </div>
+
+        <div className="py-16 overflow-hidden bg-gray-800 lg:py-24">
+          <div className="relative max-w-xl px-4 mx-auto sm:px-6 lg:px-8 lg:max-w-7xl">
+            <div className="relative">
+              <h2 className="text-3xl font-extrabold leading-8 tracking-tight text-center text-gray-50 sm:text-4xl">
+                A better way to ticketing
+              </h2>
+              <p className="max-w-3xl mx-auto mt-4 text-xl text-center text-gray-200">
+                Cryptik works differently to traditional ticketing platforms.
+                Mint NFT tickets directly from the organizers with complete
+                ownership. If you can no longer attend, trade with other Cryptik
+                users on our secondary market or anywhere on the Blockchain.
+              </p>
+            </div>
+
+            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 lg:items-center">
+              <div className="relative">
+                <dl className="mt-10 space-y-10">
+                  {transferFeatures.map((item) => (
+                    <div key={item.id} className="relative">
+                      <dt>
+                        <div className="absolute flex items-center justify-center w-12 h-12 text-white bg-indigo-500 rounded-md">
+                          <item.icon className="w-6 h-6" aria-hidden="true" />
+                        </div>
+                        <p className="ml-16 text-lg font-bold leading-6 text-gray-50">
+                          {item.name}
+                        </p>
+                      </dt>
+                      <dd className="mt-2 ml-16 text-base text-gray-200">
+                        {item.description}
+                      </dd>
                     </div>
-                  </div>
-                </div>
+                  ))}
+                </dl>
               </div>
               <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
                 <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                   <Image
-                    className="w-full shadow-xl rounded-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                    className="w-full shadow-xl rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                     src={sports}
                     alt="Customer profile user interface"
                   />
@@ -486,6 +520,8 @@ export default function Example() {
             </div>
           </div>
         </div>
+
+        {/* How it works section */}
         <div className="py-24 bg-gray-900">
           <div className="max-w-xl px-4 mx-auto sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
@@ -517,8 +553,7 @@ export default function Example() {
           </div>
         </div>
 
-        {/* More main page content here... */}
-
+        {/* Revolution section */}
         <div className="py-24 overflow-hidden bg-gray-800">
           <div className="relative px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <svg
@@ -582,6 +617,8 @@ export default function Example() {
           </div>
         </div>
       </main>
+
+      {/* Footer section */}
       <footer className="bg-gray-900">
         <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div className="flex justify-center space-x-6 md:order-2">
@@ -598,7 +635,7 @@ export default function Example() {
           </div>
           <div className="mt-8 md:mt-0 md:order-1">
             <p className="text-base text-center text-gray-400">
-              &copy; 2022 Atom, Inc. All rights reserved.
+              &copy; 2022 Cryptik, Inc. All rights reserved.
             </p>
           </div>
         </div>
