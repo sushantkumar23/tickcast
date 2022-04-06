@@ -24,6 +24,10 @@ import {
   XIcon,
   InboxIcon,
   SparklesIcon,
+  SwitchHorizontalIcon,
+  TrendingUpIcon,
+  CashIcon,
+  CollectionIcon,
 } from "@heroicons/react/outline"
 import event from "../public/event.png"
 import sports from "../public/sports.png"
@@ -192,25 +196,25 @@ const steps = [
     name: "Connect",
     description:
       "Connect your Solana wallet to pay for tickets on Cryptik to get started",
-    icon: GlobeAltIcon,
+    icon: SwitchHorizontalIcon,
   },
   {
     name: "Mint",
     description:
       "Mint tickets for all the events that you want to attend while they last!",
-    icon: ScaleIcon,
+    icon: CashIcon,
   },
   {
     name: "Trade",
     description:
       "Your NFT ticket will be available in your wallet to use or trade across the world.",
-    icon: LightningBoltIcon,
+    icon: TrendingUpIcon,
   },
   {
     name: "Collect",
     description:
       "Capture a piece of loved events through NFT collectible tickets for future rewards/discounts!",
-    icon: AnnotationIcon,
+    icon: CollectionIcon,
   },
 ]
 
@@ -488,7 +492,7 @@ export default function Example() {
               </p>
             </div>
 
-            <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 lg:items-center">
+            <div className="relative mt-12 lg:mt-20 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-8 lg:items-center">
               <div className="relative">
                 <dl className="mt-10 space-y-10">
                   {transferFeatures.map((item) => (
