@@ -23,11 +23,13 @@ import {
   MenuIcon,
   XIcon,
   InboxIcon,
-  SparklesIcon,
   SwitchHorizontalIcon,
   TrendingUpIcon,
   CashIcon,
   CollectionIcon,
+  DatabaseIcon,
+  UserGroupIcon,
+  BadgeCheckIcon,
 } from "@heroicons/react/outline"
 import event from "../public/event.png"
 import sports from "../public/sports.png"
@@ -48,21 +50,21 @@ const transferFeatures = [
     name: "Minimal fees.",
     description:
       "Built on top of Solana, Cryptik leverages the faster transaction time while ensuring the lowest transaction fees for all exchange of tickets",
-    icon: GlobeAltIcon,
+    icon: CashIcon,
   },
   {
     id: 2,
     name: "No middlemen.",
     description:
       "The underlying blockchain transaction ensures that no middlemen is involved in moving tickets for both primary & secondary transactions",
-    icon: ScaleIcon,
+    icon: UserGroupIcon,
   },
   {
     id: 3,
     name: "Fully trustless.",
     description:
       "No breach of trust as each transaction is written down into blockchain to have a verifiable proof of ticket purchases",
-    icon: LightningBoltIcon,
+    icon: BadgeCheckIcon,
   },
 ]
 const events = [
@@ -202,7 +204,7 @@ const steps = [
     name: "Mint",
     description:
       "Mint tickets for all the events that you want to attend while they last!",
-    icon: CashIcon,
+    icon: DatabaseIcon,
   },
   {
     name: "Trade",
@@ -270,7 +272,7 @@ export default function Example() {
                       src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                       alt=""
                     />
-                    <p className="text-xl font-bold text-white uppercase">
+                    <p className="text-2xl font-bold text-white lowercase">
                       Cryptik
                     </p>
                   </div>
@@ -312,8 +314,10 @@ export default function Example() {
                 <div>
                   <Image
                     className="w-auto h-8"
+                    width={36}
+                    height={36}
                     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt=""
+                    alt="Logo"
                   />
                 </div>
                 <div className="-mr-2">
@@ -373,7 +377,7 @@ export default function Example() {
         </div>
 
         {/* Trending Events section */}
-        <div className="bg-gray-900">
+        {/* <div className="bg-gray-900">
           <div className="max-w-2xl px-4 py-24 mx-auto sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 className="sr-only">Events</h2>
             <div className="sm:flex sm:items-baseline sm:justify-between">
@@ -425,7 +429,7 @@ export default function Example() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Re-imagine section */}
         <div className="relative pt-16 pb-32 overflow-hidden bg-gray-800">
@@ -537,7 +541,7 @@ export default function Example() {
                 simple steps
               </p>
             </div>
-            <dl className="mt-12 space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+            <dl className="mt-12 space-y-10 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-8">
               {steps.map((step) => (
                 <div key={step.name}>
                   <dt>
